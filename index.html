@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lokhra Coworking Space | Investor Presentation for Mr. Nelson Elangbam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b1120;
+      --surface-color: #111827;
+      --surface-color-light: #1f2937;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent-gold: #fbbf24;
+      --accent-gold-glow: rgba(251, 191, 36, 0.15);
+      --accent-blue: #38bdf8;
+      --accent-blue-glow: rgba(56, 189, 248, 0.15);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --success: #4ade80;
+      --warning: #facc15;
+      --danger: #f87171;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-xl: 32px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 60px 4vw;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-heading);
+      color: #f8fafc;
+      margin-top: 0;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(to right, #ffffff, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      color: #f1f5f9;
+    }
+
+    p {
+      margin: 0 0 20px;
+      color: var(--text-muted);
+      max-width: 900px;
+    }
+
+    strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .hero {
+      padding: 60px;
+      border-radius: var(--radius-xl);
+      background: linear-gradient(145deg, var(--surface-color), #0b1120);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow-lg), 0 0 40px var(--accent-blue-glow);
+      margin-bottom: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+    }
+
+    .investor-badge {
+      display: inline-block;
+      padding: 8px 16px;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      color: var(--accent-gold);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      font-family: var(--font-heading);
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      max-width: 900px;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .g2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .g3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .g4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg), 0 0 20px var(--accent-blue-glow);
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .kpi {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      font-family: var(--font-heading);
+      margin-bottom: 8px;
+      color: #f8fafc;
+    }
+
+    .label {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-blue);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .small {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .chips {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .chip {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.03);
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      backdrop-filter: blur(10px);
+    }
+
+    /* .banner {
+      margin-top: 40px;
+      padding: 24px 32px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(90deg, rgba(56, 189, 248, 0.1), rgba(251, 191, 36, 0.05));
+      border-left: 4px solid var(--accent-blue);
+      color: #e2e8f0;
+      font-size: 1.1rem;
+    } */
+
+    .quote {
+      padding: 24px 32px;
+      border-left: 4px solid var(--accent-gold);
+      background: var(--accent-gold-glow);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #f8fafc;
+      margin: 24px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
+    }
+
+    th,
+    td {
+      padding: 16px 20px;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-blue);
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    td {
+      color: #cbd5e1;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 20px 0;
+      padding-left: 24px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin: 12px 0;
+      padding-left: 8px;
+    }
+
+    li::marker {
+      color: var(--accent-blue);
+    }
+
+    .good {
+      color: var(--success);
+    }
+
+    .warn {
+      color: var(--warning);
+    }
+
+    .bad {
+      color: var(--danger);
+    }
+
+    .blue {
+      color: var(--accent-blue);
+    }
+
+    .impact {
+      display: grid;
+      grid-template-columns: 140px 1fr 100px;
+      gap: 20px;
+      align-items: center;
+      margin: 16px 0;
+      background: var(--surface-color-light);
+      padding: 16px 24px;
+      border-radius: var(--radius-md);
+    }
+
+    .track {
+      height: 12px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-blue), #2dd4bf);
+      box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 24px;
+      padding: 24px;
+      background: var(--surface-color-light);
+      border-radius: var(--radius-md);
+      align-items: center;
+      border: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
+
+    .step:hover {
+      border-color: var(--accent-blue);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: var(--accent-blue-glow);
+      color: var(--accent-blue);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-family: var(--font-heading);
+    }
+
+    .scorebox {
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent);
+      border: 1px solid var(--border-color);
+      text-align: center;
+    }
+
+    .scorebox .kpi {
+      font-size: 3rem;
+      margin: 16px 0;
+      background: linear-gradient(to right, #f8fafc, #94a3b8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .wrap {
+        padding: 30px 16px;
+      }
+
+      .hero {
+        padding: 32px 24px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .lead {
+        font-size: 1.1rem;
+      }
+
+      .g2,
+      .g3,
+      .g4 {
+        grid-template-columns: 1fr;
+      }
+
+      .impact {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .card,
+      .scorebox {
+        padding: 24px;
+      }
+
+      table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="investor-badge">Private &amp; Confidential &bull; Prepared for Mr. Nelson Elangbam</div>
+      <div class="eyebrow">Investor-grade HTML presentation</div>
+      <h1>Lokhra Coworking Space<br>Business Plan</h1>
+      <p class="lead">A sharper, easier-to-present version of the Lokhra coworking business plan. This version keeps the
+        full business logic, financial thinking, risks, launch path, and operating model, but presents them in a more
+        investor-friendly and easier-to-follow format.</p>
+
+      <div class="chips">
+        <div class="chip">Location: Lokhra, Guwahati</div>
+        <div class="chip">Format: Apartment Hall Coworking</div>
+        <div class="chip">Area Assumed: 2,000 sq ft</div>
+        <div class="chip">Property Cost Excluded</div>
+        <div class="chip">Recommended Capacity: 32 seats</div>
+      </div>
+
+      <div class="quote">
+        <strong>Top-line verdict:</strong> This business is viable only as a <strong>quiet, reliable, affordable
+          professional workspace</strong> — not as a luxury city-centre coworking clone.
+      </div>
+    </section>
+
+    <section class="section grid g4">
+      <div class="card">
+        <div class="label">Core call</div>
+        <div class="kpi">Viable</div>
+        <p>But only with disciplined execution, written approvals, and strong customer targeting.</p>
+      </div>
+      <div class="card">
+        <div class="label">Best market angle</div>
+        <div class="kpi">Value + Utility</div>
+        <p>Lokhra should compete on convenience, reliability, and price-to-quality balance.</p>
+      </div>
+      <div class="card">
+        <div class="label">Best product mix</div>
+        <div class="kpi">Cabin-led</div>
+        <p>Cabins and meeting-room income strengthen margins more than day passes.</p>
+      </div>
+      <div class="card">
+        <div class="label">Biggest risk</div>
+        <div class="kpi bad">Execution</div>
+        <p>Noise, weak sales, parking conflicts, or poor backup can damage the model quickly.</p>
+      </div>
+    </section>
+
+    <section class="section grid g3">
+      <div class="scorebox">
+        <div class="label">Conservative</div>
+        <div class="kpi">₹1.55L</div>
+        <p class="small">Month-24 revenue</p>
+      </div>
+      <div class="scorebox">
+        <div class="label">Realistic</div>
+        <div class="kpi">₹2.02L</div>
+        <p class="small">Month-24 revenue</p>
+      </div>
+      <div class="scorebox">
+        <div class="label">Aggressive</div>
+        <div class="kpi">₹2.49L</div>
+        <p class="small">Month-24 revenue</p>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>1) Executive Summary</h2>
+      <p>This plan studies a neighbourhood coworking space in Lokhra using a 2,000 sq ft hall inside an apartment.
+        Property cost is excluded. The strongest version of this business is not a flashy premium concept. It is a
+        disciplined workspace designed for local professionals, remote workers, small startup teams, consultants, and
+        interview or meeting-room users.</p>
+      <p>The model works best when it is built around comfort, usability, and recurring revenue. That means fewer seats,
+        better seats, stronger cabins, reliable power backup, strong internet, clear rules, and active local sales.</p>
+      <div class="quote">
+        <strong>Plain-language summary:</strong> The business can work, but the “fail-resistant” version is the one that
+        stays clean, quiet, practical, and operationally disciplined.
+      </div>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>2) Why Lokhra Can Work</h2>
+        <ul>
+          <li>Lower price expectation than prime city-centre areas</li>
+          <li>Neighbourhood convenience for South Guwahati users</li>
+          <li>Useful for remote workers and small teams who do not want long leases</li>
+          <li>Can win on convenience and practicality rather than prestige</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>3) Why Lokhra Is Not Easy</h2>
+        <ul>
+          <li>Not a prestige commercial address like GS Road</li>
+          <li>Lower walk-in visibility than central business zones</li>
+          <li>Apartment setting creates society, parking, and compliance risk</li>
+          <li>Large enterprise demand is weaker here</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>4) Market Read and Competitive Logic</h2>
+      <p>The public market signals in Guwahati show that coworking pricing already has a spread from low-cost access to
+        premium city-centre products. That means Lokhra should not try to copy premium coworking brands. It should sit
+        in the middle band: affordable, professional, and dependable.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Micromarket</th>
+            <th>Main public signal</th>
+            <th>Strategic meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Rook India</td>
+            <td>Lokhra Road</td>
+            <td>Closest local proof of demand</td>
+            <td>Shows Lokhra can support coworking if the offer is right</td>
+          </tr>
+          <tr>
+            <td>Regus</td>
+            <td>Bhangagarh / city</td>
+            <td>Premium benchmark</td>
+            <td>Not direct competition on price; useful as quality ceiling</td>
+          </tr>
+          <tr>
+            <td>Awfis</td>
+            <td>GS Road / Khanapara</td>
+            <td>Broader workspace product stack</td>
+            <td>Shows cabins, meeting rooms, and services matter</td>
+          </tr>
+          <tr>
+            <td>OfficeTribe</td>
+            <td>Christian Basti</td>
+            <td>Meeting and training product mix</td>
+            <td>Supports add-on revenue logic</td>
+          </tr>
+          <tr>
+            <td>Exospace</td>
+            <td>GS Road</td>
+            <td>Strong focus on managed reliability</td>
+            <td>Reliability is itself a marketable product</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="quote"><strong>Main strategic lesson:</strong> customers in Guwahati do not only pay for a desk. They
+        pay for a smooth working environment.</div>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>5) Positioning</h2>
+        <p><strong>Recommended positioning:</strong></p>
+        <div class="quote">Quiet, reliable, affordable professional workspace for South Guwahati.</div>
+        <p class="small">This positioning works because it clearly rejects the wrong identity: not a study centre, not a
+          café hangout, not a luxury founder club, and not a corporate prestige-address play.</p>
+      </div>
+      <div class="card">
+        <h2>6) Best Target Customers</h2>
+        <ul>
+          <li>Remote employees who need a dependable workday base</li>
+          <li>Freelancers and consultants</li>
+          <li>Small startup teams of 2–8 people</li>
+          <li>Recruiters, agencies, trainers, and interview-based users</li>
+          <li>Local SMEs needing temporary team space or cabins</li>
+        </ul>
+        <p class="small"><strong>Weakest-fit users:</strong> very low-budget study users, noisy casual groups, and large
+          enterprise occupiers.</p>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>7) Product Mix and Launch Pricing</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Launch price</th>
+            <th>Role in business</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day pass</td>
+            <td>₹299/day</td>
+            <td>Trial and lead generation</td>
+          </tr>
+          <tr>
+            <td>5-day pass</td>
+            <td>₹1,299</td>
+            <td>Bridge plan for light users</td>
+          </tr>
+          <tr>
+            <td>Flex monthly</td>
+            <td>₹4,490</td>
+            <td>Entry-level monthly membership</td>
+          </tr>
+          <tr>
+            <td>Dedicated desk</td>
+            <td>₹5,490</td>
+            <td>Core recurring product</td>
+          </tr>
+          <tr>
+            <td>4-seat cabin</td>
+            <td>₹22,900/month</td>
+            <td>High-value team product</td>
+          </tr>
+          <tr>
+            <td>Meeting room</td>
+            <td>₹399/hour</td>
+            <td>High-yield ancillary revenue</td>
+          </tr>
+          <tr>
+            <td>Meeting room half day</td>
+            <td>₹1,499</td>
+            <td>Consulting, interviews, workshops</td>
+          </tr>
+          <tr>
+            <td>Meeting room full day</td>
+            <td>₹2,799</td>
+            <td>Larger paid-use events or team days</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>8) Layout Recommendation</h2>
+        <p>The recommended version is intentionally low-density. This is important because a crowded apartment-hall
+          coworking space becomes noisy and unstable very quickly.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Count / Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dedicated desks</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>Flex / day-pass desks</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Cabins</td>
+              <td>3 cabins × 4 seats = 12 seats</td>
+            </tr>
+            <tr>
+              <td>Meeting room</td>
+              <td>1 room for 6–8 people</td>
+            </tr>
+            <tr>
+              <td>Phone booth</td>
+              <td>1 private call space</td>
+            </tr>
+            <tr>
+              <td>Pantry / print / reception</td>
+              <td>Essential support areas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>9) Why Lower Density Is Better</h2>
+        <ul>
+          <li>Better sound control</li>
+          <li>Better AC comfort and power management</li>
+          <li>Better first impression</li>
+          <li>Higher retention from serious users</li>
+          <li>More suitable for small teams and recurring members</li>
+          <li>Safer for an apartment-format operation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>10) Capital Required and Cost Structure</h2>
+      <div class="grid g2">
+        <div>
+          <h3>Capex</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>Civil refresh</td>
+                <td>₹0.90L</td>
+              </tr>
+              <tr>
+                <td>Partitions and acoustics</td>
+                <td>₹1.65L</td>
+              </tr>
+              <tr>
+                <td>Furniture</td>
+                <td>₹2.10L</td>
+              </tr>
+              <tr>
+                <td>Electrical and networking</td>
+                <td>₹0.95L</td>
+              </tr>
+              <tr>
+                <td>AC improvement</td>
+                <td>₹1.20L</td>
+              </tr>
+              <tr>
+                <td>UPS / inverter backup</td>
+                <td>₹0.90L</td>
+              </tr>
+              <tr>
+                <td>CCTV / fire / signage</td>
+                <td>₹0.40L</td>
+              </tr>
+              <tr>
+                <td>Pantry and small equipment</td>
+                <td>₹0.32L</td>
+              </tr>
+              <tr>
+                <td>Branding and website</td>
+                <td>₹0.28L</td>
+              </tr>
+              <tr>
+                <td>Contingency</td>
+                <td>₹0.90L</td>
+              </tr>
+              <tr>
+                <th>Total setup capex</th>
+                <th>₹9.60L</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Monthly Fixed Opex Year 1</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>Community manager + inside sales</td>
+                <td>₹0.30L</td>
+              </tr>
+              <tr>
+                <td>Housekeeping / support</td>
+                <td>₹0.10L</td>
+              </tr>
+              <tr>
+                <td>Electricity</td>
+                <td>₹0.20L</td>
+              </tr>
+              <tr>
+                <td>Internet / IT</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <td>Pantry / water</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <td>Repair / AMC</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <td>Compliance / accounting / software</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <td>Marketing baseline</td>
+                <td>₹0.07L</td>
+              </tr>
+              <tr>
+                <td>Referral / broker baseline</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <td>Security / access contribution</td>
+                <td>₹0.03L</td>
+              </tr>
+              <tr>
+                <td>Misc reserve</td>
+                <td>₹0.05L</td>
+              </tr>
+              <tr>
+                <th>Fixed opex</th>
+                <th>₹1.00L</th>
+              </tr>
+            </tbody>
+          </table>
+          <p class="small">Recommended separate working-capital reserve: ₹2.5–3.0L.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>11) Scenario Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>Occupied seats at Month 24</th>
+            <th>Month-24 revenue</th>
+            <th>24-month operating cash</th>
+            <th>Capex payback</th>
+            <th>ROIC on capex</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conservative</td>
+            <td>25 / 32</td>
+            <td>₹1.55L</td>
+            <td class="bad">-₹1.92L</td>
+            <td>~52 months</td>
+            <td class="bad">-20%</td>
+          </tr>
+          <tr>
+            <td>Realistic</td>
+            <td>28 / 32</td>
+            <td>₹2.02L</td>
+            <td class="good">₹7.86L</td>
+            <td>~27 months</td>
+            <td class="good">82%</td>
+          </tr>
+          <tr>
+            <td>Aggressive</td>
+            <td>31 / 32</td>
+            <td>₹2.49L</td>
+            <td class="good">₹16.39L</td>
+            <td>~19 months</td>
+            <td class="good">171%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="impact">
+        <div>Seat fill</div>
+        <div class="track">
+          <div class="fill" style="width:62%"></div>
+        </div>
+        <div>25 seats</div>
+      </div>
+      <div class="impact">
+        <div>Seat fill</div>
+        <div class="track">
+          <div class="fill" style="width:78%"></div>
+        </div>
+        <div>28 seats</div>
+      </div>
+      <div class="impact">
+        <div>Seat fill</div>
+        <div class="track">
+          <div class="fill" style="width:90%"></div>
+        </div>
+        <div>31 seats</div>
+      </div>
+
+      <div class="quote">
+        <strong>Reading the model correctly:</strong> the project is not attractive under a weak conservative demand
+        case, workable under the realistic case, and very attractive only if execution is strong enough to reach the
+        aggressive case.
+      </div>
+    </section>
+
+    <section class="section grid g3">
+      <div class="card">
+        <div class="label">Break-even revenue</div>
+        <div class="kpi">₹1.12L</div>
+        <p>Approximate cash operating break-even at the year-2 cost level.</p>
+      </div>
+      <div class="card">
+        <div class="label">Practical break-even</div>
+        <div class="kpi">18–21 seats</div>
+        <p>Depending on meeting-room and day-pass contribution.</p>
+      </div>
+      <div class="card">
+        <div class="label">Main implication</div>
+        <div class="kpi">Stay premium enough</div>
+        <p>The model gets weaker if the space becomes too cheap or attracts the wrong users.</p>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>12) Financial Logic in Simple Business Language</h2>
+      <ul>
+        <li><strong>Cabins are the money engine.</strong> They improve revenue quality and stability.</li>
+        <li><strong>Day passes are not the core business.</strong> They are mostly conversion tools.</li>
+        <li><strong>Meeting rooms add high-margin income.</strong> They can materially improve economics.</li>
+        <li><strong>Advance monthly billing is powerful.</strong> Coworking becomes safer when fees are collected in
+          advance.</li>
+        <li><strong>Retention matters more than people think.</strong> Replacing members every month destroys profit.
+        </li>
+      </ul>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>13) Sales and Lead System</h2>
+        <p>In Lokhra, this business must be sold actively. It will not fill itself just because the space exists.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Purpose</th>
+              <th>Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Local B2B outbound</td>
+              <td>Reach nearby businesses and teams</td>
+              <td>40 touches/week</td>
+            </tr>
+            <tr>
+              <td>WhatsApp</td>
+              <td>Fast follow-up and conversion</td>
+              <td>Respond same day</td>
+            </tr>
+            <tr>
+              <td>Google Maps</td>
+              <td>Capture local search traffic</td>
+              <td>3 posts/week</td>
+            </tr>
+            <tr>
+              <td>Referrals</td>
+              <td>Low-cost high-trust leads</td>
+              <td>1 referral/member/quarter</td>
+            </tr>
+            <tr>
+              <td>Partnerships</td>
+              <td>CAs, recruiters, tutors, agencies</td>
+              <td>3 new partners/month</td>
+            </tr>
+            <tr>
+              <td>Marketplace listings</td>
+              <td>Support discovery</td>
+              <td>Keep updated monthly</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card">
+        <h2>14) Sales Funnel</h2>
+        <ol class="small">
+          <li>Lead comes in through Google, referral, outreach, WhatsApp, or walk-in</li>
+          <li>Tour arranged quickly</li>
+          <li>Trial day or trial meeting offered</li>
+          <li>Same-day proposal sent</li>
+          <li>Advance fee and deposit collected</li>
+          <li>Seat allocated and onboarding completed</li>
+          <li>7-day and 30-day check-in done</li>
+          <li>User upgraded from flex to dedicated or cabin when possible</li>
+        </ol>
+        <div class="quote"><strong>Main sales rule:</strong> speed of response is part of the product.</div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>15) Retention Strategy and KPIs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>KPI</th>
+            <th>Target</th>
+            <th>Meaning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gross monthly seat churn</td>
+            <td>&lt; 3.5%</td>
+            <td>Healthy customer stickiness</td>
+          </tr>
+          <tr>
+            <td>Lead-to-tour conversion</td>
+            <td>&gt; 25%</td>
+            <td>Offer is relevant to market</td>
+          </tr>
+          <tr>
+            <td>Tour-to-trial conversion</td>
+            <td>&gt; 35%</td>
+            <td>Good sales and clear proposition</td>
+          </tr>
+          <tr>
+            <td>Trial-to-paid conversion</td>
+            <td>&gt; 45%</td>
+            <td>Experience is convincing</td>
+          </tr>
+          <tr>
+            <td>Meeting-room utilisation</td>
+            <td>&gt; 20% by month 9</td>
+            <td>Add-on monetisation is working</td>
+          </tr>
+          <tr>
+            <td>Google review score</td>
+            <td>&gt; 4.6</td>
+            <td>Helps trust and local conversions</td>
+          </tr>
+          <tr>
+            <td>Complaint closure time</td>
+            <td>&lt; 4 hours</td>
+            <td>Supports retention</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>What reduces churn</h3>
+      <ul>
+        <li>Separate quiet users from heavy-call users</li>
+        <li>Make backup internet and power visibly reliable</li>
+        <li>Set clear meeting-room and printing rules</li>
+        <li>Fix AC, chair, Wi‑Fi, and washroom issues immediately</li>
+        <li>Reject bad-fit customers before they harm the environment</li>
+      </ul>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>16) SWOT</h2>
+        <h3>Strengths</h3>
+        <ul>
+          <li>No property cost in the model</li>
+          <li>Neighbourhood convenience</li>
+          <li>Cabins + meeting-room improve yield</li>
+          <li>Low-density layout supports stronger retention</li>
+        </ul>
+        <h3>Weaknesses</h3>
+        <ul>
+          <li>Not a prestige address</li>
+          <li>Apartment-format risk</li>
+          <li>Lower natural footfall than prime office belts</li>
+        </ul>
+        <h3>Opportunities</h3>
+        <ul>
+          <li>Remote-work spillover</li>
+          <li>Startup and small-team usage</li>
+          <li>Training and interview-room demand</li>
+          <li>Neighbourhood professional demand</li>
+        </ul>
+        <h3>Threats</h3>
+        <ul>
+          <li>Price wars</li>
+          <li>Utility failure</li>
+          <li>Society restrictions</li>
+          <li>Wrong customer mix</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>17) Key Risks and Mitigation</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Risk</th>
+              <th>Why it matters</th>
+              <th>Mitigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Society objection</td>
+              <td>Can stop the business</td>
+              <td>Written NOC before capex</td>
+            </tr>
+            <tr>
+              <td>Parking complaints</td>
+              <td>Creates constant conflict</td>
+              <td>Clear slot and visitor policy</td>
+            </tr>
+            <tr>
+              <td>Power/internet outage</td>
+              <td>Immediate brand damage</td>
+              <td>UPS + inverter + dual connection</td>
+            </tr>
+            <tr>
+              <td>Wrong pricing</td>
+              <td>Either low-quality users or low conversions</td>
+              <td>Review after 60 days</td>
+            </tr>
+            <tr>
+              <td>Noise bleed</td>
+              <td>Drives good members away</td>
+              <td>Acoustics + booth + zoning</td>
+            </tr>
+            <tr>
+              <td>Overbuilding</td>
+              <td>Slows payback</td>
+              <td>Functional, durable fitout</td>
+            </tr>
+            <tr>
+              <td>Weak sales execution</td>
+              <td>Occupancy stays low</td>
+              <td>Founder-led weekly sales discipline</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>18) Compliance Checklist</h2>
+      <p>This project becomes far safer when compliance is handled before launch, not after.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Checklist item</th>
+            <th>What is required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Owner consent</td>
+            <td>Written approval for business use</td>
+          </tr>
+          <tr>
+            <td>Society / apartment NOC</td>
+            <td>Written approval, not verbal</td>
+          </tr>
+          <tr>
+            <td>Commercial / mixed-use compatibility</td>
+            <td>Confirm building use is legally suitable</td>
+          </tr>
+          <tr>
+            <td>Trade licence</td>
+            <td>Apply before operating</td>
+          </tr>
+          <tr>
+            <td>Shops & Establishment registration</td>
+            <td>Complete within required time</td>
+          </tr>
+          <tr>
+            <td>Fire-safety applicability</td>
+            <td>Check extinguishers, wiring, exits, load, signage</td>
+          </tr>
+          <tr>
+            <td>Parking rules</td>
+            <td>Written parking policy and visitor control</td>
+          </tr>
+          <tr>
+            <td>Signage permission</td>
+            <td>Get building approval</td>
+          </tr>
+          <tr>
+            <td>Power load review</td>
+            <td>Ensure the building can handle office usage</td>
+          </tr>
+          <tr>
+            <td>Access-hour permission</td>
+            <td>Do not promise 24/7 if not approved</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="quote"><strong>Critical rule:</strong> do not invest meaningful capex before use permissions, parking
+        clarity, and legal compatibility are confirmed.</div>
+    </section>
+
+    <section class="section card">
+      <h2>19) Launch Roadmap</h2>
+      <div class="timeline">
+        <div class="step">
+          <div><span class="tag">Step 1</span></div>
+          <div><strong>Get written approvals</strong><br><span class="small">Owner and society clearance come
+              first.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 2</span></div>
+          <div><strong>Finalize layout and vendors</strong><br><span class="small">Do not overspend on décor. Spend on
+              utility quality.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 3</span></div>
+          <div><strong>File compliance items</strong><br><span class="small">Trade licence, registrations, and
+              operational permissions.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 4</span></div>
+          <div><strong>Build pre-sales pipeline</strong><br><span class="small">Warm leads should exist before
+              launch.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 5</span></div>
+          <div><strong>Install fitout, internet, and backup</strong><br><span class="small">Test the system before
+              opening.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 6</span></div>
+          <div><strong>Soft launch with trials</strong><br><span class="small">Use early members to refine the
+              offer.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 7</span></div>
+          <div><strong>Push cabins and reviews</strong><br><span class="small">Stabilise recurring revenue and social
+              proof.</span></div>
+        </div>
+        <div class="step">
+          <div><span class="tag">Step 8</span></div>
+          <div><strong>Review pricing and occupancy</strong><br><span class="small">Adjust only after real early-market
+              feedback.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid g2">
+      <div class="card">
+        <h2>20) What To Do</h2>
+        <ul>
+          <li>Keep the space quiet, cool, and clean</li>
+          <li>Sell cabins early</li>
+          <li>Use day passes as funnel products</li>
+          <li>Collect prepaid fees and deposits</li>
+          <li>Track occupancy, churn, and meeting-room revenue every week</li>
+          <li>Protect resident relationships seriously</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>21) What Not To Do</h2>
+        <ul>
+          <li>Do not overbuild interiors at the cost of comfort and backup</li>
+          <li>Do not promise 24/7 access without approval</li>
+          <li>Do not discount the product so much that it becomes a study hall</li>
+          <li>Do not give unlimited meeting-room access in cheap plans</li>
+          <li>Do not ignore parking complaints</li>
+          <li>Do not launch before legal clarity</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>22) Final Bottom Line</h2>
+      <p>The Lokhra coworking opportunity is real, but it is highly execution-sensitive. The model becomes strong only
+        when the operator behaves like a disciplined local workspace business, not like a casual rental hall operator.
+      </p>
+      <div class="grid g3">
+        <div>
+          <h3>It wins when</h3>
+          <ul>
+            <li>permissions are clear</li>
+            <li>cabins fill early</li>
+            <li>backup is strong</li>
+            <li>sales follow-up is fast</li>
+            <li>user mix stays professional</li>
+          </ul>
+        </div>
+        <div>
+          <h3>It loses when</h3>
+          <ul>
+            <li>society issues start</li>
+            <li>parking becomes messy</li>
+            <li>noise drives good users away</li>
+            <li>weak sales leaves occupancy low</li>
+            <li>pricing becomes too cheap</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Best expert reading</h3>
+          <ul>
+            <li>Conservative case is weak</li>
+            <li>Realistic case is viable</li>
+            <li>Aggressive case is attractive</li>
+            <li>Execution decides which case becomes real</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote">
+        <strong>Final verdict:</strong> If approvals are secured, the layout stays disciplined, cabins are sold early,
+        and local sales are active, this can become a durable neighbourhood coworking business in Lokhra.
+      </div>
+    </section>
+
+    <div class="footer">
+      Private & Confidential • Prepared for Mr. Nelson Elangbam • Copyright &copy; 2026 N8E Labs • All rights reserved.
+    </div>
+  </div>
+</body>
+
+</html>
