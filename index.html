@@ -51,6 +51,8 @@
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     .wrap {
@@ -69,6 +71,7 @@
       margin-top: 0;
       font-weight: 600;
       letter-spacing: -0.02em;
+      overflow-wrap: break-word;
     }
 
     h1 {
@@ -163,6 +166,10 @@
       gap: 24px;
     }
 
+    .grid>* {
+      min-width: 0;
+    }
+
     .g2 {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -182,6 +189,9 @@
       padding: 32px;
       box-shadow: var(--shadow-md);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 0;
+      max-width: 100%;
+      overflow-wrap: break-word;
     }
 
     .card:hover {
@@ -257,6 +267,7 @@
 
     table {
       width: 100%;
+      max-width: 100%;
       border-collapse: separate;
       border-spacing: 0;
       margin: 24px 0;
@@ -451,6 +462,8 @@
         display: block;
         overflow-x: auto;
         white-space: nowrap;
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
       }
     }
   </style>
